@@ -12,13 +12,17 @@ html{
     font-size: 15px;
 }
 body{
-    color: $texto;
-    font-family: 'Open-sans',sans-serif;
-    padding: 0.5rem 0;
-    padding:0;
+  color: $texto;
+  font-family: 'Open-sans',sans-serif;
+  padding: 0.5rem 0;
+  padding:0;
 }
-.bg-dark{
-    background-color: rgb(31, 31, 34) !important;
+.backg-dark{
+  background-color: rgb(31, 31, 34) !important;
+}
+.text-shadow{
+  text-shadow: -0.6px 0.4px rgba(21, 98, 185, 0.87);
+  transition: all 1s ease;  
 }
  
 //------------------------------------------------
@@ -26,12 +30,13 @@ body{
 //------------------------------------------------
 
 .home{ 
-    color: $texto-W;
-    background: url("images/posible-bg3.jpg") no-repeat center;
-    background-size: cover;
-    //background-position: center;  
-    display: flex;
-    flex-direction: column;
+  color: $texto-W;
+  background: url("images/posible-bg3.jpg") no-repeat center;
+  background-size: cover;
+  height: 100vh;
+  //background-position: center;  
+  display: flex;
+  flex-direction: column;
 }
 
 //------------------------------------------------
@@ -39,201 +44,351 @@ body{
 //------------------------------------------------ 
 
 .navbar {
-    //display: flex;
-    background-color: transparent; 
-    //flex-wrap: wrap;
-    //justify-content: space-between;
-    // align-items: center;
-    //max-width: none;
-    transition: all 1s ease;
+  //display: flex;
+  background-color: transparent; 
+  //flex-wrap: wrap;
+  //justify-content: space-between;
+  // align-items: center;
+  //max-width: none;
+  transition: all 1s ease;
 }
-    .navbar .logo img{   //===== LOGO DEL SITIO
-         width: 50px;
-         height: auto;
-         //flex:1 0 20%;
-    }
-    .ws-name{            //===== NOMBRE DEL SITIO
-         text-decoration: none;
-         color: $texto-W;
-         font-size: 1.5 rem;
-         font-weight: bold; 
-    }
+.navbar .logo img{   //===== LOGO DEL SITIO
+  width: 50px;
+  height: auto;
+  //flex:1 0 20%;
+}
+.ws-name{            //===== NOMBRE DEL SITIO
+  text-decoration: none;
+  color: $texto-W;
+  font-size: 1.5 rem;
+  font-weight: bold;
+}
     
-    .navbar .menu-button {    //====== BOTON MENU
-        //padding: 0 .8rem;
-       // background: transparent;
-        border:0;
-        font-size: 1.5rem; 
-        color: $texto-W;
-        //border-radius: 5px;
-        //border:1px solid transparent;
-        
-    }
-    .navbar .menu-button:hover, .navbar .menu-button:focus { 
-        outline:0;
-        
-    }
-        
-        .navbar-collapse{   //===== NAV DE MENU
-            flex:1 1 100%;
-            transition: all .5s ease;
-        }
-            .navbar-collapse .navbar-nav{ //===== UL --> NAV de MENU
-               display: flex;
-               justify-content: flex-end; 
-            }
-
-                
-                .navbar-nav .nav-item .nav-link{ //=== a de LI - UL ^ 
-                    color:$texto-W;
-                    text-transform: uppercase;
-                    font-weight: bold
-                }
-                .navbar-nav .nav-item:hover .nav-link, .navbar-nav .nav-item .nav-link:focus{
-                    color: rgb(213, 215, 223);
-                    display: inline-block; 
-                    border-bottom: 2px solid;
-                    
-                }
-                    
-
-    //------------------------------------------------
-    // HEADER en HOME 
-    //------------------------------------------------                
-    .home__header{
-        align-items: center;
-    }
-        .home__header .container{  //===== CONTAINER CON EL TITULO Y LA DESCRIPCION 
-            flex:1 1 auto;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-            .container .display-4{  //==== TITULO DEL SITIO
-                margin-top: 8rem;
-         
-            }
-            .container .description{
-                font-size: 1.5rem;
-                margin-top: 3rem;    
-            }
-   //------------------------------------------------
-   // SLIDE DE IMÁGENES (Home - Header) 
-   //------------------------------------------------ 
-
-    .home .images { //=== CONTAINER DEL CAROUSEL
-
-        padding-top: 6rem;
-        padding-bottom: 4rem;
-        //background-color: rgba(0, 0, 0, 0.507);  //prueba
-        display: flex;
-        justify-content: center;
-        
-    }
-       .home .images .carousel{  
-            background-color: rgba(255, 235, 205, 0.795); //prueba
-            max-width: 300px;
-            min-width: 300px;
+.navbar .menu-button {    //====== BOTON MENU
+  border:0;
+  font-size: 1.5rem; 
+  color: $texto-W;
+     
+}
+.navbar .menu-button:hover, .navbar .menu-button:focus { 
+  outline:0;
+    
+}
+    
+.navbar-collapse{   //===== NAV DE MENU
+flex:1 1 100%;
+transition: all .5s ease;
+}
+.navbar-collapse .navbar-nav{ //===== UL --> NAV de MENU
+  display: flex;
+  justify-content: flex-end; 
+}
             
-            
-        }
-            .carousel img{ 
+.navbar-nav .nav-item .nav-link{ //=== a de LI - UL ^ 
+  color:$texto-W;
+  text-transform: uppercase;
+  font-weight: bold
+}
+.navbar-nav .nav-item:hover .nav-link, .navbar-nav .nav-item .nav-link:focus, .navbar-nav .nav-item .nav-link.active{
+  color: $texto-W;
+  display: inline-block; 
+  border-bottom: 2px solid;
+    
+}
 
-                max-width: 300px;
-                min-width: 300px;
-                //max-height: 400px;
-            } 
+                    
+//------------------------------------------------
+// HEADER en HOME 
+//------------------------------------------------                
+.home__header{
+  align-items: center;
+  margin-top: 8rem;
+}
+.home__header .container{  //===== CONTAINER CON EL TITULO 
+  flex:1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+    
+}
+
+.prueba .description{
+  text-align: center;
+  font-size: 1.3rem;
+  margin-top: 1.3rem;
+  margin-bottom: 0;    
+}
+//------------------------------------------------
+// SLIDE DE IMÁGENES (Home - Header) 
+//------------------------------------------------ 
+
+.home .images { //=== CONTAINER DEL CAROUSEL
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  //background-color: rgba(0, 0, 0, 0.507);  //prueba
+  display: flex;
+  justify-content: center;
+    
+}
+.home .images .carousel{  
+  background-color: rgba(255, 235, 205, 0.795); //prueba
+  width: 180px;
+  height:230px;
+}
+.carousel img{
+  width: 180px;
+  height: 230px;
+    
+} 
 
 //------------------------------------------------
 // FOOTER
 //------------------------------------------------
 
 .footer{
-    background-color: $texto;
-    color: #fff;
-    text-align: center;
-    font-size: .9rem;
+  background-color: $texto;
+  color: #fff;
+  text-align: center;
+  font-size: .8rem;
 }
     
-    .footer .social-media{ //==== Redes sociales
-        display: flex;
-        list-style: none;
-        justify-content: center;
-        margin:0;
-        padding: 0;
-    }
-        .footer .social-media a{
-        color:#fff;
-        margin:0 0.5rem;
-        font-size: 2rem;
-        opacity: 0.7;
-        transition: all 0.5s ease;
-        } 
-        .footer .social-media a:hover{
-            opacity: 1;
-        } 
+.footer .social-media{ //==== Redes sociales
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin:0;
+  padding: 0;
+}
+.footer .social-media a{
+color:#fff;
+margin:0 0.5rem;
+font-size: 1.6rem;
+opacity: 0.7;
+transition: all 0.5s ease;
+} 
+.footer .social-media a:hover{
+  opacity: 1;
+} 
 //------------------------------------------------
 // Flecha subir
 //------------------------------------------------
 
 .up{
-    position: fixed;
-    bottom: 1rem;
-    right: 1rem;
-    z-index: 999999;
-    color:grey;
-    text-decoration: none;
-    font-size: 3rem;
-    line-height: 0;
-    transition: all 0.5s ease;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 999999;
+  color:grey;
+  text-decoration: none;
+  font-size: 2.6rem;
+  line-height: 0;
+  transition: all 0.5s ease;
 }
-    .up:hover{
-        color: rgb(179, 179, 184);  
-    }   
-    .up:focus{
-        outline:0;
-        text-decoration: none;
-    }         
+.up:hover{
+  color: rgb(179, 179, 184);  
+}   
+.up:focus{
+  outline:0;
+  text-decoration: none;
+}         
  
+
+//=====================================================================
+// =======================  MEDIAS QUERYS  ===========================
 //=====================================================================
 
-//------------------------------------------------
-// MEDIAS QUERYS
-//------------------------------------------------
 @media (min-width: 430px) {
 
-    .home__header .display-4{
-        font-size: 4.3rem;
-    }
-
+  .home__header .display-4{
+    font-size: 4.5rem;
+    font-weight: bold;
+  }
+    
 }
+/*@media (min-width: 544px) {
+
+    .home__header .display-4{
+        font-size: 4.5rem;
+        font-weight: bold;
+    }
+    
+}*/
+//=================(768)==============================================
 
 @media (min-width: 768px) {
 
 
-    html{
-        font-size: 16px;
-    }
-        .home{   //============HOME
-            background: url("images/bg-md.jpg") no-repeat center;
-            background-size: cover;
-            
-        }
+  html{
+    font-size: 16px;
+  }
+  
+  .navbar .logo{ //=================LOGO
+    margin-left: 1rem; 
+     
+  }
+  .text-shadow{   //===== NOMBRE DEL SITIO
+  text-shadow: -1px 0.7px rgba(74, 125, 235, 0.897), -2px 1.5px grey;
+}
+  .navbar .navbar-nav{  //================ (UL de NAV)
+    margin-left: auto;
+    margin-right: 1rem !important;
+    justify-content: flex-end;
+  }
+  .home{   //============HOME
+    background: url("images/bg-md.jpg") no-repeat center; //===cambio de fondo
+    background-size: cover;
+    height: 100vh;
+      
+  }
+  .home__header .header__text{ //====contenedor del titulo y la descripcion
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .home__header .display-4{ //===titulo
+    font-size: 5rem;
+  }
+  .home__header .description{//===descripcion
+    margin-top:1.6rem;
+    font-weight: bold;
+    padding-right: 0;
+    margin-left: 1rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    align-self: flex-end;
+    margin-top: 6rem;
+  }
+  .home .images .carousel{ //===carousel
+    margin-left: 3rem;  
+    width: 200px;
+    height:250px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 200px;
+    min-height: 250px;
+  } 
+  .up{
+  font-size: 2.8rem;
+}
+   
+}
 
-            .home__header .display-4{
-                font-size: 5rem;
-            }
-            .navbar .logo{ //=================LOGO
-                margin-left: 1rem !important; 
-               
-            }
-            .navbar .navbar-nav{  //================ (UL de NAV)
-                margin-left: auto;
-                margin-right: 1rem !important;
-                justify-content: flex-end;
-            }
 
+//=======================(870)==========================================
+
+@media (min-width: 870px) {
+
+  .home__header .header__text{ //====contenedor del titulo y la descricion
+    padding-left: 2rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    margin-top: 5.3rem;
+    padding-right: 0;
+  }
+  .home .images .carousel{ //===carousel 
+    width: 220px;
+    height:275px;
+  }
+  .carousel img{//=== img delcarousel
+    min-width: 220px;
+    min-height: 275px;
+  } 
     
+}
+
+//=======================(950)==========================================
+
+@media (min-width: 950px) {
+
+  .home__header .header__text{ //====contenedor del titulo y la descricion
+    padding-left: 2.5rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    margin-top: 4rem;
+  }
+  .home .images .carousel{ //===carousel 
+    width: 230px;
+    height:290px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 230px;
+    min-height: 290px;
+  }
+  
+ .footer .social-media a{
+    font-size: 2rem;
+  }  
     
+}
+
+//=======================(1045)==========================================
+
+@media (min-width: 1045px) {
+  html{
+    font-size: 17px;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    margin-top: 3rem;
+  }
+  .home .images .carousel{ //===carousel 
+    width: 245px;
+    height:300px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 245px;
+    min-height: 300px;
+  }
+}
+
+//=======================(1165)==========================================
+
+@media (min-width: 1165px) {
+  .navbar .logo img{   //===== LOGO DEL SITIO
+  width: 55px;
+  height: auto;
+}
+.navbar .logo .ws-name{   //===== NOMBRE DEL SITIO
+  font-size: 1.5rem;
+
+}
+ .text-shadow{
+  text-shadow: -1.3px 1px rgba(74, 125, 235, 0.897), -2.3px 2px grey;
+
+ }
+  .home__header .display-4{ //===titulo
+    font-size: 5.5rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    margin-top: .5rem;
+  }
+  .home .images .carousel{ //===carousel 
+    width: 300px;
+    height:345px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 300px;
+    min-height: 345px;
+  }
+}
+//=======================(1235)==========================================
+
+@media (min-width: 1235px) {
+  .home__header .header__text{ //====contenedor del titulo y la descricion
+    padding-left: 3.5rem;
+    padding-top:0;
+  }
+  .home__header .display-4{ //===titulo
+    font-size: 5.6rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes 
+    margin-top: 0;
+  }
+  .home .images .carousel{ //===carousel 
+    width: 310px;
+    height:360px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 310px;
+    min-height: 360px; 
+  }
 }
