@@ -5,7 +5,7 @@
 
     const $nav = $("#navbar") // =============== NAVBAR
     const $menu_button = $("#menu-button")//==== MENU BUTTON ON NAVBAR
-    const $ws_name = $('span.ws-name') // ====== WEBSITE NAME
+    const $ws_name = $('span.ws-name') // ====== WEBSITE NAME ON NAVBAR
 
     const $back_to_top = $('.up')  //=========== ARROW --> BACK TO TOP
 
@@ -56,18 +56,15 @@
 
             alert(texto)
 
-
             $name.val('')
             $phone.val('')
             $email.val('')
             $message.val('')
 
-            $allStars.addClass('fa-star-o').removeClass('fa-star')
-            $rate.text("")
+            fillStars(0)
         })
         $form.on('reset', () => {
-            $allStars.addClass('fa-star-o').removeClass('fa-star')
-            $rate.text("")
+            fillStars(0)
         })
 
     })
@@ -84,15 +81,17 @@
         let empty_star = true
         let text_rate = ""
 
+        if (id === 0) {
+            empty_star = false
+        }
+
         for (let i = 0; i < 5; i++) {
 
             if (empty_star) {
                 $(`#${$allStars[i].id}`).removeClass('fa-star-o').addClass('fa-star')
                 text_rate = $(`#${$allStars[i].id}`).attr('data-star-value')
-
             } else {
                 $(`#${$allStars[i].id}`).removeClass('fa-star').addClass('fa-star-o')
-
             }
             if ($allStars[i].id === id) {
                 empty_star = false
@@ -100,7 +99,6 @@
         }
         $rate.text(text_rate)
     }
-
 
 })(jQuery);
 
