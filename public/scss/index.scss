@@ -33,8 +33,7 @@ body{
   color: $texto-W;
   background: url("images/posible-bg3.jpg") no-repeat center;
   background-size: cover;
-  height: 100vh;
-  //background-position: center;  
+  height: 100vh;  
   display: flex;
   flex-direction: column;
 }
@@ -44,18 +43,12 @@ body{
 //------------------------------------------------ 
 
 .navbar {
-  //display: flex;
   background-color: transparent; 
-  //flex-wrap: wrap;
-  //justify-content: space-between;
-  // align-items: center;
-  //max-width: none;
   transition: all 1s ease;
 }
 .navbar .logo img{   //===== LOGO DEL SITIO
   width: 50px;
   height: auto;
-  //flex:1 0 20%;
 }
 .ws-name{            //===== NOMBRE DEL SITIO
   text-decoration: none;
@@ -76,8 +69,8 @@ body{
 }
     
 .navbar-collapse{   //===== NAV DE MENU
-flex:1 1 100%;
-transition: all .5s ease;
+  flex:1 1 100%;
+  transition: all .5s ease;
 }
 .navbar-collapse .navbar-nav{ //===== UL --> NAV de MENU
   display: flex;
@@ -124,24 +117,34 @@ transition: all .5s ease;
 //------------------------------------------------ 
 
 .home .images { //=== CONTAINER DEL CAROUSEL
-  padding-top: 2rem;
+  padding-top: 5rem;
   padding-bottom: 2rem;
-  //background-color: rgba(0, 0, 0, 0.507);  //prueba
   display: flex;
   justify-content: center;
     
 }
 .home .images .carousel{  
-  background-color: rgba(255, 235, 205, 0.795); //prueba
-  width: 180px;
+  width: 180px ;
   height:230px;
 }
 .carousel img{
   width: 180px;
   height: 230px;
     
-} 
+}
+.registry-form .stars ul{ //=== every star on star-bar
+  list-style: none;
+  padding-left: 0;
+}
 
+.registry-form .stars .star{ //=== every star on star-bar
+  color: rgb(74, 193, 230);
+}
+.registry-form .stars .rate{ //=== every star on star-bar
+  color: rgb(74, 193, 230);
+  font-size: .8rem;
+  padding-top: .8rem;
+}
 //------------------------------------------------
 // FOOTER
 //------------------------------------------------
@@ -206,18 +209,10 @@ transition: all 0.5s ease;
   }
     
 }
-/*@media (min-width: 544px) {
 
-    .home__header .display-4{
-        font-size: 4.5rem;
-        font-weight: bold;
-    }
-    
-}*/
 //=================(768)==============================================
 
 @media (min-width: 768px) {
-
 
   html{
     font-size: 16px;
@@ -236,14 +231,17 @@ transition: all 0.5s ease;
     justify-content: flex-end;
   }
   .home{   //============HOME
+    position: relative;
     background: url("images/bg-md.jpg") no-repeat center; //===cambio de fondo
     background-size: cover;
-    height: 100vh;
+    //height: 100vh;
       
   }
   .home__header .header__text{ //====contenedor del titulo y la descripcion
-    justify-content: flex-start;
-    align-items: flex-start;
+    margin-left: 2rem;
+    padding-left: 0;
+    //justify-content: flex-start; // !!!ESto es una prueba
+    //align-items: flex-start;
   }
   .home__header .display-4{ //===titulo
     font-size: 5rem;
@@ -254,12 +252,17 @@ transition: all 0.5s ease;
     padding-right: 0;
     margin-left: 1rem;
   }
-  .home .images{//===contenedor del carousel de imagenes 
-    align-self: flex-end;
-    margin-top: 6rem;
+  .home .images{//===contenedor del carousel de imagenes  // !!!esto es una prueba
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    padding-left: 5rem; 
+    //align-self: flex-end; //esto es una prueba
+    //margin-top: 6rem; //esto es una prueba
+
   }
   .home .images .carousel{ //===carousel
-    margin-left: 3rem;  
+    //margin-left: 3rem;   //!!!esto es una prueba
     width: 200px;
     height:250px;
   }
@@ -278,18 +281,18 @@ transition: all 0.5s ease;
 
 @media (min-width: 870px) {
 
-  .home__header .header__text{ //====contenedor del titulo y la descricion
-    padding-left: 2rem;
+  .home__header .header__text{ //====contenedor del titulo y la descricion  
+    margin-left: 0;
   }
-  .home .images{//===contenedor del carousel de imagenes 
+  /*.home .images{//===contenedor del carousel de imagenes  //!!!esto es una prueba
     margin-top: 5.3rem;
     padding-right: 0;
-  }
+  }*/
   .home .images .carousel{ //===carousel 
     width: 220px;
     height:275px;
   }
-  .carousel img{//=== img delcarousel
+  .carousel img{//=== img del carousel
     min-width: 220px;
     min-height: 275px;
   } 
@@ -300,12 +303,12 @@ transition: all 0.5s ease;
 
 @media (min-width: 950px) {
 
-  .home__header .header__text{ //====contenedor del titulo y la descricion
-    padding-left: 2.5rem;
+  /*.home__header .header__text{ //====contenedor del titulo y la descricion  //!!!esto es una prueba
+    padding-left: 0;
   }
-  .home .images{//===contenedor del carousel de imagenes 
+  /*.home .images{//===contenedor del carousel de imagenes 
     margin-top: 4rem;
-  }
+  }*/
   .home .images .carousel{ //===carousel 
     width: 230px;
     height:290px;
@@ -327,9 +330,9 @@ transition: all 0.5s ease;
   html{
     font-size: 17px;
   }
-  .home .images{//===contenedor del carousel de imagenes 
+  /*.home .images{//===contenedor del carousel de imagenes  //!!!esto es una prueba
     margin-top: 3rem;
-  }
+  }*/
   .home .images .carousel{ //===carousel 
     width: 245px;
     height:300px;
@@ -358,37 +361,78 @@ transition: all 0.5s ease;
   .home__header .display-4{ //===titulo
     font-size: 5.5rem;
   }
-  .home .images{//===contenedor del carousel de imagenes 
-    margin-top: .5rem;
-  }
+  /*.home .images{//===contenedor del carousel de imagenes  !!!esto es una prueba
+    margin-top: 3rem;
+  }*/
   .home .images .carousel{ //===carousel 
     width: 300px;
-    height:345px;
+    height:355px;
   }
   .carousel img{//=== img del carousel
     min-width: 300px;
-    min-height: 345px;
+    min-height: 355px;
   }
 }
 //=======================(1235)==========================================
 
 @media (min-width: 1235px) {
-  .home__header .header__text{ //====contenedor del titulo y la descricion
+  /*.home__header .header__text{ //====contenedor del titulo y la descripcion !!!esto es una prueba
     padding-left: 3.5rem;
     padding-top:0;
-  }
+  }*/
   .home__header .display-4{ //===titulo
     font-size: 5.6rem;
   }
-  .home .images{//===contenedor del carousel de imagenes 
-    margin-top: 0;
-  }
+  /*.home .images{//===contenedor del carousel de imagenes //!!!esto es una prueba
+    margin-top: 2rem; 
+  }*/
   .home .images .carousel{ //===carousel 
-    width: 310px;
-    height:360px;
+    width: 320px;
+    height:390px;
   }
   .carousel img{//=== img del carousel
-    min-width: 310px;
-    min-height: 360px; 
+    min-width: 320px;
+    min-height: 390px; 
   }
+}
+//=================(Al girar el movil)=================================
+
+@media (max-height: 530px){  //orientation: landscape --> !!esto no m funciono como queria  
+  .home{   //============HOME
+    position: relative;   
+  }
+  .home__header{
+  margin-top: 5.4rem;
+}
+  .home__header .header__text{ //====contenedor del titulo y la descripcion
+    margin-left: 1.6rem;
+    padding-left: 0;
+    align-items: flex-start;
+    
+  }
+  .home__header .display-4{
+    font-size: 4rem;
+  }
+  .home__header .description{//===descripcion
+    margin-top:1rem;
+    text-align: start;  //--prueba
+    margin-left: .3rem;
+  }
+  .home .images{//===contenedor del carousel de imagenes  // !!!esto es una prueba
+    position: absolute;
+    right: 2rem;
+    bottom: 2.6rem;
+    width: 170px;
+    height:220px;
+    padding-top: 0;
+  }
+  .home .images .carousel{ //===carousel
+    width: 170px;
+    height:220px;
+  }
+  .carousel img{//=== img del carousel
+    min-width: 170px;
+    min-height: 220px;
+  }      
+         
 }

@@ -16,7 +16,7 @@
 
         <div class="images container-fluid col-12 col-md-5">
 
-          <div id="carousel-images" class="carousel slide shadow" data-ride="carousel">
+          <div id="carousel-images" class="carousel slide" data-ride="carousel">
 
             <div class="carousel-inner" role="listbox">
               <div class="carousel-item active">
@@ -67,11 +67,11 @@
 
       <div class="col-md-8">
         <h2 class="mb-3">Registry Form</h2>
-        <form action="#">
+        <form action="#" id="form__registry">
           <div class="form-group row">
             <label for="nombre" class="col-md-4 col-form-label">Name</label>
             <div class="col-md-8">
-              <input class="form-control" type="text" id="nombre" name="nombre" placeholder="Your name"
+              <input class="form-control" type="text" id="name" name="nombre" placeholder="Your name"
                 data-toggle="tooltip" data-placement="top" title="Enter your name">
             </div>
           </div>
@@ -92,11 +92,26 @@
           </div>
 
           <div class="form-group row">
-            <label for="mensaje" class="col-md-4 col-form-label">Message</label>
+            <label for="menssage" class="col-md-4 col-form-label">Message</label>
             <div class="col-md-8">
-              <textarea class="form-control" rows="5" id="mensaje" name="mensaje" placeholder="Message"
+              <textarea class="form-control" rows="5" id="message" name="mensaje" placeholder="Message"
                 data-toggle="tooltip" data-placement="top" title="Write a message"></textarea>
             </div>
+          </div>
+          <div class="row stars">
+            <label class="col-md-4 col-form-label">Rate Us</label>
+
+            <ul class="d-flex star-bar col-9 col-md-5 mb-3 mt-2 pl-2" id="star-list">
+
+              <li class="mx-2"><i class="star fa fa-star-o" data-star-number="1" data-star-value="DREADFUL"></i></li>
+              <li class="mx-2"><i class="star fa fa-star-o" data-star-number="2" data-star-value="BAD"></i></li>
+              <li class="mx-2"><i class="star fa fa-star-o" data-star-number="3" data-star-value="MEDIUM"></i></li>
+              <li class="mx-2"><i class="star fa fa-star-o" data-star-number="4" data-star-value="GOOD"></i></li>
+              <li class="mx-2"><i class="star fa fa-star-o" data-star-number="5" data-star-value="GREAT"></i></li>
+            </ul>
+
+            <div class=" rate col-3"><span id="rate"></span></div>
+
           </div>
           <div class="form-group row">
             <div class="col-md-8 offset-md-4">
