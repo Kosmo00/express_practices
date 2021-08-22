@@ -7170,7 +7170,7 @@ body {
   background-color: #1f1f22 !important; }
 
 .text-shadow {
-  text-shadow: -0.6px 0.4px rgba(21, 98, 185, 0.87);
+  text-shadow: 0px 0px #6ac0e7;
   transition: all 1s ease; }
 
 .home {
@@ -7192,7 +7192,7 @@ body {
 .ws-name {
   text-decoration: none;
   color: #fff;
-  font-size: 1.5 rem;
+  font-size: 1.3rem;
   font-weight: bold; }
 
 .navbar .menu-button {
@@ -7257,12 +7257,13 @@ body {
   padding-left: 0; }
 
 .registry-form .stars .star {
-  color: #4ac1e6; }
+  color: #6ac0e7; }
 
 .registry-form .stars .rate {
-  color: #4ac1e6;
+  color: #6ac0e7;
   font-size: .8rem;
-  padding-top: .8rem; }
+  padding-top: .8rem;
+  padding-left: 0; }
 
 .footer {
   background-color: #111111;
@@ -7271,11 +7272,7 @@ body {
   font-size: .8rem; }
 
 .footer .social-media {
-  display: flex;
-  list-style: none;
-  justify-content: center;
-  margin: 0;
-  padding: 0; }
+  list-style: none; }
 
 .footer .social-media a {
   color: #fff;
@@ -7316,7 +7313,7 @@ body {
   .navbar .logo {
     margin-left: 1rem; }
   .text-shadow {
-    text-shadow: -1px 0.7px rgba(74, 125, 235, 0.897), -2px 1.5px grey; }
+    text-shadow: -1px 0.7px #6ac0e7, -2px 1.5px grey; }
   .navbar .navbar-nav {
     margin-left: auto;
     margin-right: 1rem !important;
@@ -7326,7 +7323,7 @@ body {
     background: url("images/bg-md.jpg") no-repeat center;
     background-size: cover; }
   .home__header .header__text {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
     padding-left: 0; }
   .home__header .display-4 {
     font-size: 5rem; }
@@ -7341,93 +7338,44 @@ body {
     bottom: 1rem;
     padding-left: 5rem; }
   .home .images .carousel {
-    width: 200px;
-    height: 250px; }
-  .carousel img {
-    min-width: 200px;
-    min-height: 250px; }
-  .up {
-    font-size: 2.8rem; } }
-
-@media (min-width: 870px) {
-  .home__header .header__text {
-    margin-left: 0; }
-  /*.home .images{//===contenedor del carousel de imagenes  //!!!esto es una prueba
-    margin-top: 5.3rem;
-    padding-right: 0;
-  }*/
-  .home .images .carousel {
     width: 220px;
     height: 275px; }
   .carousel img {
     min-width: 220px;
-    min-height: 275px; } }
+    min-height: 275px; }
+  .up {
+    font-size: 2.8rem; } }
 
 @media (min-width: 950px) {
-  /*.home__header .header__text{ //====contenedor del titulo y la descricion  //!!!esto es una prueba
-    padding-left: 0;
-  }
-  /*.home .images{//===contenedor del carousel de imagenes 
-    margin-top: 4rem;
-  }*/
-  .home .images .carousel {
-    width: 230px;
-    height: 290px; }
-  .carousel img {
-    min-width: 230px;
-    min-height: 290px; }
-  .footer .social-media a {
-    font-size: 2rem; } }
-
-@media (min-width: 1045px) {
   html {
     font-size: 17px; }
-  /*.home .images{//===contenedor del carousel de imagenes  //!!!esto es una prueba
-    margin-top: 3rem;
-  }*/
+  .navbar .logo .ws-name {
+    font-size: 1.5rem; }
+  .home__header .header__text {
+    margin-left: 0; }
   .home .images .carousel {
     width: 245px;
     height: 300px; }
   .carousel img {
     min-width: 245px;
-    min-height: 300px; } }
+    min-height: 300px; }
+  .footer .social-media a {
+    font-size: 2rem; } }
 
 @media (min-width: 1165px) {
   .navbar .logo img {
     width: 55px;
     height: auto; }
-  .navbar .logo .ws-name {
-    font-size: 1.5rem; }
   .text-shadow {
-    text-shadow: -1.3px 1px rgba(74, 125, 235, 0.897), -2.3px 2px grey; }
+    text-shadow: -1.6px 1.2px #6ac0e7, -3px 2.2px grey; }
   .home__header .display-4 {
     font-size: 5.5rem; }
-  /*.home .images{//===contenedor del carousel de imagenes  !!!esto es una prueba
-    margin-top: 3rem;
-  }*/
   .home .images .carousel {
     width: 300px;
     height: 355px; }
   .carousel img {
     min-width: 300px;
     min-height: 355px; } }
-
-@media (min-width: 1235px) {
-  /*.home__header .header__text{ //====contenedor del titulo y la descripcion !!!esto es una prueba
-    padding-left: 3.5rem;
-    padding-top:0;
-  }*/
-  .home__header .display-4 {
-    font-size: 5.6rem; }
-  /*.home .images{//===contenedor del carousel de imagenes //!!!esto es una prueba
-    margin-top: 2rem; 
-  }*/
-  .home .images .carousel {
-    width: 320px;
-    height: 390px; }
-  .carousel img {
-    min-width: 320px;
-    min-height: 390px; } }
 
 @media (max-height: 530px) {
   .home {

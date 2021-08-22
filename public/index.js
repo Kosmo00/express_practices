@@ -52,9 +52,10 @@
 
             ev.preventDefault()
 
-            let texto = 'Name: ' + $name.val() + '   Phone number: ' + $phone.val() + '   Email: ' + $email.val() + '   Message: ' + $message.val() + '  Rate: ' + $rate.text()
+            const texto = `Name:  ${$name.val()}  Phone number:  ${$phone.val()}   Email: ${$email.val()}  Message:  ${$message.val()} Rate:  ${$rate.text()}`
 
             alert(texto)
+
 
             $name.val('')
             $phone.val('')
@@ -64,41 +65,41 @@
             $allStars.addClass('fa-star-o').removeClass('fa-star')
             $rate.text("")
         })
+        $form.on('reset', () => {
+            $allStars.addClass('fa-star-o').removeClass('fa-star')
+            $rate.text("")
+        })
+
     })
     //==== Stars ==== //
     $(() => {
 
-        let $star_list = $('#star-list') //== lista con estrellas
-        let n = 0 //=== numero d estrella donde se hace click
-        let n2 = 0 //=== numero d estrella donde se hizo el click anterior 
-        text_rate = ""
-
-
-        $star_list.on('click', (e) => {
-
-            n = e.target.getAttribute('data-star-number')
-
-            console.log(n)
-
-            let $star = $('#star-list li:lt(' + (n) + ') .star') //=== todas las estrellas marcadas
-
-            if (n != null) {//esto es porque si se hace un click dentro de la lista pero fuera d la estrella n =null y todas las estrellas pasan a blanco
-
-                if ($star.hasClass('fa-star') && n2 === n) {
-                    $star.addClass('fa-star-o').removeClass('fa-star')
-                    text_rate = ""
-                } else {
-                    $allStars.addClass('fa-star-o')
-                    $star.removeClass('fa-star-o').addClass('fa-star')
-                    text_rate = $allStars.eq(n - 1).attr('data-star-value')
-                }
-                $rate.text(text_rate)
-            }
-            n2 = n
-
+        $allStars.on('click', (e) => {
+            const id = e.currentTarget.id //=== id (y numero) d estrella donde se hace click
+            fillStars(id)
         })
-
     })
+
+    function fillStars(id) {
+        let empty_star = true
+        let text_rate = ""
+
+        for (let i = 0; i < 5; i++) {
+
+            if (empty_star) {
+                $(`#${$allStars[i].id}`).removeClass('fa-star-o').addClass('fa-star')
+                text_rate = $(`#${$allStars[i].id}`).attr('data-star-value')
+
+            } else {
+                $(`#${$allStars[i].id}`).removeClass('fa-star').addClass('fa-star-o')
+
+            }
+            if ($allStars[i].id === id) {
+                empty_star = false
+            }
+        }
+        $rate.text(text_rate)
+    }
 
 
 })(jQuery);
