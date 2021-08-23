@@ -40,7 +40,7 @@
         $('[data-toggle="tooltip"]').tooltip()
     })
 
-    //=== SUBMIT ON FORM OF REGISTRY FORM ====//
+    //=== SUBMIT AND RESET ON FORM OF REGISTRY FORM ====//
     $(() => {
 
         let $name = $('#name')
