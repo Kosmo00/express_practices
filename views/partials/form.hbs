@@ -8,48 +8,46 @@
         <div class="form-group row">
           <label for="nombre" class="col-md-4 col-form-label">Name</label>
           <div class="col-md-8">
-            <input class="form-control" type="text" id="name" name="nombre" placeholder="Your name"
-              data-toggle="tooltip" data-placement="top" title="Enter your name">
+            <input class="form-control" type="text" id="name" name="name" placeholder="Your name" data-toggle="tooltip"
+              data-placement="top" title="Enter your name" minlength="2" maxlength="50" pattern="^[a-zA-Z ]+$" required>
           </div>
         </div>
         <div class="form-group row">
           <label for="phone" class="col-md-4 col-form-label">Phone number</label>
           <div class="col-md-8">
-            <input class="form-control" type="text" id="phone" name="nombre" placeholder="Your phone number"
-              data-toggle="tooltip" data-placement="top" title="Enter your phone number">
+            <input class="form-control" type="text" id="phone" name="phone" placeholder="Your phone number"
+              data-toggle="tooltip" data-placement="top" title="Enter your phone number" minlength="6" maxlength="30"
+              pattern="^[0-9 ]+$">
           </div>
         </div>
 
         <div class="form-group row">
           <label for="email" class="col-md-4 col-form-label">Email</label>
           <div class="col-md-8">
-            <input class="form-control" type="text" id="email" name="email" placeholder="Your e-mail"
-              data-toggle="tooltip" data-placement="top" title="Insert your e-mail">
+            <input class="form-control" type="email" id="email" name="email" placeholder="Your e-mail"
+              data-toggle="tooltip" data-placement="top" title="Insert your e-mail" minlength="8" maxlength="250"
+              required>
           </div>
         </div>
 
         <div class="form-group row">
           <label for="menssage" class="col-md-4 col-form-label">Message</label>
           <div class="col-md-8">
-            <textarea class="form-control" rows="5" id="message" name="mensaje" placeholder="Message"
-              data-toggle="tooltip" data-placement="top" title="Write a message"></textarea>
+            <textarea class="form-control" rows="5" id="message" name="message" placeholder="Message"
+              data-toggle="tooltip" data-placement="top" title="Write a message" required></textarea>
           </div>
         </div>
-        <div class="row stars">
+        <div class="form-group row stars">
           <label class="col-md-4 col-form-label">Rate Us</label>
 
-          <ul class="d-flex star-bar col-9 col-md-5 mb-3 mt-2 pl-2" id="star-list">
+          <ul class=" d-flex star-bar col-9 col-md-5 mb-3 mt-2 pl-2" id="star-list" name="star-list"
+            data-toggle="tooltip" data-placement="top" title="Please, Rate Us">
 
-            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="DREADFUL" id="1"></i>
-            </li>
-            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="BAD" id="2"></i>
-            </li>
-            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="MEDIUM" id="3"></i>
-            </li>
-            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="GOOD" id="4"></i>
-            </li>
-            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="GREAT" id="5"></i>
-            </li>
+            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="DREADFUL" id="1"></i></li>
+            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="BAD" id="2"></i></li>
+            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="MEDIUM" id="3"></i></li>
+            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="GOOD" id="4"></i></li>
+            <li class="mx-2"><i class="star fa fa-star-o" data-star-value="GREAT" id="5"></i></li>
           </ul>
 
           <div class=" rate col-3"><span id="rate"></span></div>
