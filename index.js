@@ -1,13 +1,16 @@
 const express = require('express')
 const morgan = require('morgan')
+const cors = require('cors')
 const exphbs = require('express-handlebars')
 const path = require('path')
 
 const app = express()
+const cors_config = require('./cors')
 
 // Ajustes
 
 app.set('port', process.env.PORT || 4000)
+app.use(cors(cors_config.application.cors.server))
 app.engine('.hbs', exphbs({
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
