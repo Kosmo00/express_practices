@@ -72,6 +72,8 @@
                 $message.val('')
 
                 fillStars(0)
+            } else {
+                setTooltip($star_list, "ALL THE STARS ARE EMPTY", 'show', 'danger')
             }
         })
         $form.on('reset', () => {
@@ -85,7 +87,7 @@
         $allStars.on('click', (e) => {
             const id = e.currentTarget.id //=== id (y numero) d estrella donde se hace click
             fillStars(id)
-            setTooltip($star_list, "Thank's", 'show')
+            setTooltip($star_list, "Thank's", 'show', 'no')
         })
     })
     //======== FUNCION QUE RELLENA ESTRELLAS
@@ -111,34 +113,58 @@
         }
         $rate.text(text_rate)
         if (text_rate == '') {
-            setTooltip($star_list, "Please, Rate Us", 'no')
+            setTooltip($star_list, "Please, Rate Us", 'no', 'no')
         }
     }
     //================================FUNCIONES PARA VALIDAR EL FORMULARIO==================
     function BeforeSubmit() { //==========Antes de enviar
 
-        $name.on('keyup', () => {
+        $name.on('input', () => {
+            const regex = /^[a-zA-Z ]+$/
             let value = $name.val()
-            if (!onlyWords(value) && !(value == '')) {
-                setTooltip($name, 'ONLY WORDS', 'show')
+            let words = 'Only Words'
+            let minlenght = 'Please lengthen this text to 2 charaters or more'
+            if (!regex.test(value) && value.length != 0) {
+                setTooltip($name, words, 'show', 'danger')
+                $name.val(value.replace(/[^a-z ]+/ig, ''))
+                setTimeout(() => {
+                    setTooltip($name, 'Enter your name', 'show', 'no')
+                }, 1000)
+            } else if (value.length < 2 && value.length != 0) {
+                setTooltip($name, minlenght, 'show', 'danger')
+                $name.addClass('invalid')
             } else {
-                setTooltip($name, 'Enter your name', 'show')
+                setTooltip($name, 'Enter your name', 'show', 'no')
+                $name.removeClass('invalid')
             }
         })
-        $phone.on('keyup', () => {
+
+        $phone.on('input', () => {
+            const regex = /^[0-9 ]+$/
             let value = $phone.val()
-            if (!onlyDigits(value) && !(value == '')) {
-                setTooltip($phone, 'ONLY DIGITS', 'show')
+            let digits = 'Only Digits'
+            let minlenght = 'Please lengthen this text to 6 charaters or more'
+            if (!regex.test(value) && value.length != 0) {
+                setTooltip($phone, digits, 'show', 'danger')
+                $phone.val(value.replace(/[^0-9 ]+/g, ''))
+                setTimeout(() => {
+                    setTooltip($phone, 'Enter your phone number', 'show', 'no')
+                }, 1000)
+            } else if (value.length < 6 && value.length != 0) {
+                setTooltip($phone, minlenght, 'show', 'danger')
+                $phone.addClass('invalid')
             } else {
-                setTooltip($phone, 'Enter your phone number', 'show')
+                setTooltip($phone, 'Enter your phone number', 'show', 'no')
+                $phone.removeClass('invalid')
             }
         })
+
     }
     //=== FUNCION QUE VALIDA QUE LAS ESTRELLAS ESTEN RELLENAS
     function validateStars() {
         let starsValue = $rate.text()
         if (starsValue == '') {
-            setTooltip($star_list, "ALL THE STARS ARE EMPTY", 'show')
+            //setTooltip($star_list, "ALL THE STARS ARE EMPTY", 'show', 'danger') No se xq no se pintaba de rojo!!!
             return false
         }
         else {
@@ -147,23 +173,20 @@
     }
 
     //===== FUNCION QUE CAMBIA EL TOOLTIP SI ESTA MAL LO QUE ESCRIBE EL USUARIO
-    function setTooltip(elem, newTitle, show) {
+    function setTooltip(elem, newTitle, show, danger) {
+        if (danger == 'danger') {
+            $('.tooltip-inner').css({ 'background-color': ' rgb(175, 2, 2)' })
+            $('.tooltip.bs-tooltip-top .arrow').addClass('red')
+        } else {
+            $('.tooltip-inner').css({ 'background-color': ' #000' })
+            $('.tooltip.bs-tooltip-top .arrow').removeClass('red')
+        }
         if (show == 'show') {
             elem.attr('data-original-title', newTitle).tooltip('show')
         } else {
             elem.attr('data-original-title', newTitle)
         }
     }
-
-    function onlyWords(texto) {//===comprobar que sean solo caracteres y epacios
-        var regex = /^[a-zA-Z ]+$/
-        return regex.test(texto)
-    }
-    function onlyDigits(texto) {//=== comprobar que sean solo numeros
-        var regex = /^[0-9 ]+$/
-        return regex.test(texto)
-    }
-
 
 })(jQuery);
 

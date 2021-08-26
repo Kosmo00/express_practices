@@ -7254,10 +7254,15 @@ body {
   height: calc(100vh/3);
   width: calc((100vh/3.6)); }
 
-.registry-form input[type="email"]:focus:invalid, .registry-form input[type="text"]:focus:invalid {
-  border-color: #ff8080;
+.registry-form .invalid:focus:invalid {
+  border-color: #e60404;
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25); }
+
+.registry-form input[type='email']:focus:valid {
+  border-color: #04e62a;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(3, 241, 3, 0.25); }
 
 .registry-form .stars ul {
   list-style: none;
@@ -7415,3 +7420,6 @@ body {
   .carousel img {
     width: 150px;
     height: 200px; } }
+
+.tooltip.bs-tooltip-top .arrow.red:before, .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow.red:before {
+  border-top-color: #b30505; }

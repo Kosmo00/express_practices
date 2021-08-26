@@ -10,7 +10,7 @@ $texto-W:#fff;
 $myBlue: rgb(106, 192, 231);
 
 html{
-  font-size: 15px;
+    font-size: 15px;
 }
 body{
   color: $texto;
@@ -136,10 +136,15 @@ body{
 //------------------------------------------------
 // REGISTRY FORM 
 //------------------------------------------------ 
-.registry-form input[type="email"]:focus:invalid,.registry-form input[type="text"]:focus:invalid{ 
-border-color: #ff8080;
+.registry-form .invalid:focus:invalid{ 
+border-color: #e60404;
 outline: 0;
 box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.25);
+}
+.registry-form input[type='email']:focus:valid{ 
+border-color: #04e62a;
+outline: 0;
+box-shadow: 0 0 0 0.2rem rgba(3, 241, 3, 0.25);
 }
 .registry-form .stars ul{ //=== every star on star-bar
   list-style: none;
@@ -334,7 +339,7 @@ transition: all 0.5s ease;
   }
   .home__header{
   margin-top: 5.4rem;
-  }
+}
   .home__header .header__text{ //====contenedor del titulo y la descripcion
     margin-left: 1.6rem;
     padding-left: 0;
@@ -367,4 +372,10 @@ transition: all 0.5s ease;
     width: 150px;
     height: 200px;
   }         
+}
+
+//=====Flecha del tooltip alert roja
+
+.tooltip.bs-tooltip-top .arrow.red:before{
+  border-top-color:  rgb(179, 5, 5);
 }
