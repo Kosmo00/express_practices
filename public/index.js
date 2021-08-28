@@ -24,10 +24,10 @@
 
     $(() => { /* ===== CAMBIAR NAVBAR ===== */
         let cont = 0
-        $(document).on('scroll', () => {
+        $(window).on('scroll', () => {
             if ($(this).scrollTop() > 80) {
                 $nav.addClass('backg-dark shadow')
-            } else if ($(this).scrollTop() < 80 && cont % 2 != 0) {
+            } else if ($(this).scrollTop() < 80 && cont % 2 !== 0) {
                 $nav.addClass('backg-dark shadow')
             } else {
                 $nav.removeClass('backg-dark shadow')
@@ -37,6 +37,9 @@
 
         $menu_button.on('click', () => {
             $nav.addClass('backg-dark shadow')
+            if ($(this).scrollTop() < 80 && cont % 2 !== 0) {
+                $nav.removeClass('backg-dark shadow')
+            }
             cont++
         })
     })
