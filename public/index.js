@@ -1,6 +1,4 @@
 
-
-
 (($) => {
 
     //============== NAVBAR ==========================================
@@ -22,7 +20,7 @@
     const $allStars = $('.star') //============= ALL STARS
     const $rate = $('#rate')//================== RATE OF STRARS
 
-    const $modal = $('#modal')//================ MODAL CON LA INFO INCERTADA EN EL FORM
+    var ultID = 0 //============================ ID DE LA ULTIMA ESTRELLA SELECCIONADA
 
     $(() => { /* ===== CAMBIAR NAVBAR ===== */
         $(document).on('scroll', () => {
@@ -33,11 +31,9 @@
         $menu_button.on('click', () => {
             $nav.addClass('backg-dark shadow')
         })
-
     })
 
     /*==== DESAPARECER FLECHA UP ====*/
-
     $(window).on('scroll', () => {
         if ($(this).scrollTop() > 100) {
             $back_to_top.fadeIn('slow')
@@ -61,17 +57,50 @@
             ev.preventDefault();
 
             if (validateStars()) {
-                const texto = `Name:  ${$name.val()}  Phone number:  ${$phone.val()}  Email: ${$email.val()}  Message:  ${$message.val()}  Rate:  ${$rate.text()}`
 
-                $modal.find('#text_info').text(texto)
-                $modal.modal("show")
+                const data = {
+                    name: $name.val(),
+                    phone: $phone.val(),
+                    email: $email.val(),
+                    message: $message.val(),
+                    calification: ultID
+                }
+                let templete = '<div class="alert alert-:alertype: alert-dismissible fade show" role="alert">' +
+                    '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
+                    '<span aria-hidden="true">&times;</span>' +
+                    '</button>' +
+                    '<strong>:status: </strong>:res:</div>'
 
-                $name.val('')
-                $phone.val('')
-                $email.val('')
-                $message.val('')
+                $.ajax({
+                    data: JSON.stringify(data),
+                    url: 'http://localhost:4000/api/messages',
+                    headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    },
+                    type: 'POST',
+                    success: (res, textStatus, xhr) => {
+                        if (xhr.status == 200) {
 
-                fillStars(0)
+                            $name.val('')
+                            $phone.val('')
+                            $email.val('')
+                            $message.val('')
+
+                            fillStars(0)
+
+                            let alert = templete.replace(':alertype:', 'success').replace(':status:', textStatus).replace(':res:', res.message)
+                            $(alert).insertAfter($form)
+
+                        } else {
+                            let alert = templete.replace(':alertype:', 'danger').replace(':status:', 'Oh no!').replace(':res:', 'Something was wrong')
+                            $(alert).insertAfter($form)
+                        }
+                    },
+                    error: err => {
+                        console.log(err)
+                    }
+                })
             } else {
                 setTooltip($star_list, "ALL THE STARS ARE EMPTY", 'show', 'danger')
             }
@@ -79,15 +108,14 @@
         $form.on('reset', () => {
             fillStars(0)
         })
-
     })
     //============= Stars ============== //
     $(() => {
-
         $allStars.on('click', (e) => {
             const id = e.currentTarget.id //=== id (y numero) d estrella donde se hace click
             fillStars(id)
             setTooltip($star_list, "Thank's", 'show', 'no')
+            ultID = id
         })
     })
     //======== FUNCION QUE RELLENA ESTRELLAS
@@ -122,8 +150,8 @@
         $name.on('input', () => {
             const regex = /^[a-zA-Z ]+$/
             let value = $name.val()
-            let words = 'Only Words'
-            let minlenght = 'Please lengthen this text to 2 charaters or more'
+            const words = 'Only Words'
+            const minlenght = 'Please lengthen this text to 2 charaters or more'
             if (!regex.test(value) && value.length != 0) {
                 setTooltip($name, words, 'show', 'danger')
                 $name.val(value.replace(/[^a-z ]+/ig, ''))
@@ -142,8 +170,8 @@
         $phone.on('input', () => {
             const regex = /^[0-9 ]+$/
             let value = $phone.val()
-            let digits = 'Only Digits'
-            let minlenght = 'Please lengthen this text to 6 charaters or more'
+            const digits = 'Only Digits'
+            const minlenght = 'Please lengthen this text to 6 charaters or more'
             if (!regex.test(value) && value.length != 0) {
                 setTooltip($phone, digits, 'show', 'danger')
                 $phone.val(value.replace(/[^0-9 ]+/g, ''))
@@ -158,20 +186,15 @@
                 $phone.removeClass('invalid')
             }
         })
-
     }
     //=== FUNCION QUE VALIDA QUE LAS ESTRELLAS ESTEN RELLENAS
     function validateStars() {
-        let starsValue = $rate.text()
+        const starsValue = $rate.text()
         if (starsValue == '') {
-            //setTooltip($star_list, "ALL THE STARS ARE EMPTY", 'show', 'danger') No se xq no se pintaba de rojo!!!
             return false
         }
-        else {
-            return true
-        }
+        return true
     }
-
     //===== FUNCION QUE CAMBIA EL TOOLTIP SI ESTA MAL LO QUE ESCRIBE EL USUARIO
     function setTooltip(elem, newTitle, show, danger) {
         if (danger == 'danger') {
