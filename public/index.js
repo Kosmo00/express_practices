@@ -65,11 +65,11 @@
                     message: $message.val(),
                     calification: ultID
                 }
-                let templete = '<div class="alert alert-:alertype: alert-dismissible fade show" role="alert">' +
+                /*let templete = '<div class="alert alert-:alertype: alert-dismissible fade show" role="alert">' +
                     '<button type="button" class="close" data-dismiss="alert" aria-label="Close">' +
                     '<span aria-hidden="true">&times;</span>' +
                     '</button>' +
-                    '<strong>:status: </strong>:res:</div>'
+                    '<strong>:status: </strong>:res:</div>'*/
 
                 $.ajax({
                     data: JSON.stringify(data),
@@ -80,25 +80,21 @@
                     },
                     type: 'POST',
                     success: (res, textStatus, xhr) => {
-                        if (xhr.status == 200) {
 
-                            $name.val('')
-                            $phone.val('')
-                            $email.val('')
-                            $message.val('')
+                        $name.val('')
+                        $phone.val('')
+                        $email.val('')
+                        $message.val('')
 
-                            fillStars(0)
+                        fillStars(0)
 
-                            let alert = templete.replace(':alertype:', 'success').replace(':status:', textStatus).replace(':res:', res.message)
-                            $(alert).insertAfter($form)
-
-                        } else {
-                            let alert = templete.replace(':alertype:', 'danger').replace(':status:', 'Oh no!').replace(':res:', 'Something was wrong')
-                            $(alert).insertAfter($form)
-                        }
+                        let alert = template('success', textStatus, res.message,)
+                        $(alert).insertAfter($form)
                     },
                     error: err => {
                         console.log(err)
+                        let alert = template('danger', 'Oh no!', 'Something was wrong')
+                        $(alert).insertAfter($form)
                     }
                 })
             } else {
@@ -209,6 +205,14 @@
         } else {
             elem.attr('data-original-title', newTitle)
         }
+    }
+    function template(alertype, status, res) {
+        return `<div class="alert alert-${alertype} alert-dismissible fade show" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <strong>${status} </strong>${res}
+                </div>`
     }
 
 })(jQuery);
