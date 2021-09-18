@@ -7423,3 +7423,35 @@ body {
 
 .tooltip.bs-tooltip-top .arrow.red:before, .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow.red:before {
   border-top-color: #b30505; }
+
+.logo {
+  width: 50px; }
+
+.encabezado {
+  background: url("../presentacion/d1.jpg") no-repeat center top;
+  color: #0609af;
+  background-size: cover;
+  padding-top: 0px; }
+
+.agencia {
+  background: #c5c5c8;
+  color: #0e0d0d;
+  padding-top: 0px; }
+
+.avion {
+  width: 100%;
+  height: 300px; }
+
+.novedades {
+  background: #b6d6ba;
+  padding-top: 20px; }
+
+.parrafo {
+  font-size: 20px; }
+
+.footer {
+  background: #010501;
+  padding: 0px;
+  margin: 0px;
+  color: white;
+  font-size: 20px; }
