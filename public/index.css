@@ -7446,12 +7446,8 @@ body {
   background: #b6d6ba;
   padding-top: 20px; }
 
-.parrafo {
-  font-size: 20px; }
+.novedades .carousel img {
+  height: 500px; }
 
-.footer {
-  background: #010501;
-  padding: 0px;
-  margin: 0px;
-  color: white;
+.parrafo {
   font-size: 20px; }
