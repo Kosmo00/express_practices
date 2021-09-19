@@ -7464,3 +7464,7 @@ h1.welcome {
 
 .navbar-logo {
   display: inline-block; }
+
+.nav-link {
+  display: block;
+  margin: 0.5rem .5rem; }
