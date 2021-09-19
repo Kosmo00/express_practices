@@ -7441,8 +7441,13 @@ h1.welcome {
   padding-top: 0px; }
 
 .avion {
-  width: 100%;
-  height: 300px; }
+  min-height: 200px;
+  min-width: 200px;
+  height: 100%;
+  width: auto;
+  max-height: 100%;
+  max-width: 100%;
+  display: flex; }
 
 .novedades {
   background: #b6d6ba;
@@ -7456,3 +7461,6 @@ h1.welcome {
 
 .letrero {
   margin-top: auto; }
+
+.navbar-logo {
+  display: inline-block; }
