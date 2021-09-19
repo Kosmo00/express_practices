@@ -7431,7 +7431,7 @@ body {
   background: url("../presentacion/d1.jpg") no-repeat center top;
   color: #0609af;
   background-size: cover;
-  padding-top: 0px; }
+  display: flex; }
 
 .agencia {
   background: #c5c5c8;
@@ -7451,3 +7451,6 @@ body {
 
 .parrafo {
   font-size: 20px; }
+
+.letrero {
+  margin-top: auto; }

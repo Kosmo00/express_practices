@@ -391,9 +391,9 @@ transition: all 0.5s ease;
 .encabezado{
 	background: url("../presentacion/d1.jpg") no-repeat center top; 
 	color:rgb(6, 9, 175);
-	background-size: cover;
-	padding-top: 0px;
-}
+  background-size: cover;
+  display: flex;
+ }
 
 
 .agencia{
@@ -419,3 +419,8 @@ height: 500px;
 .parrafo{
   font-size: 20px;
 }
+
+.letrero{
+  margin-top: auto;
+}
+
