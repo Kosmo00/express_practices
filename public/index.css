@@ -7430,8 +7430,7 @@ body {
 .encabezado {
   background: url("../presentacion/d1.jpg") no-repeat center top;
   color: #0609af;
-  background-size: cover;
-  display: flex; }
+  background-size: cover; }
 
 .agencia {
   background: #c5c5c8;
