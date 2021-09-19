@@ -7441,7 +7441,7 @@ h1.welcome {
   padding-top: 0px; }
 
 .avion {
-  min-height: 200px;
+  min-height: auto;
   min-width: 200px;
   height: 100%;
   width: auto;
