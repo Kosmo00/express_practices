@@ -7432,6 +7432,9 @@ body {
   color: #0609af;
   background-size: cover; }
 
+h1.welcome {
+  padding-top: 150px; }
+
 .agencia {
   background: #c5c5c8;
   color: #0e0d0d;
