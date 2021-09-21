@@ -7469,25 +7469,31 @@ h1.welcome {
   display: block;
   margin: 0.5rem 1rem; }
 
-h2 {
-  width: 800px;
-  line-height: 40px;
-  border-bottom: 1px solid;
-  margin: 200px auto;
-  font-size: 24px; }
+body {
+  font-family: monospace;
+  background: url("../images/d1.jpg"); }
 
-.animate {
-  display: inline-block;
-  padding: 0 5px;
-  vertical-align: 3px;
-  font-size: 20px;
-  font-weight: normal; }
+.contenedor {
+  margin: auto;
+  display: table; }
 
-.animate.on {
-  animation: fade 1.5s infinite forwards; }
+h1 {
+  position: relative;
+  float: left;
+  background: url("../images/d1.jpg");
+  color: #fff;
+  font-size: 2.5em; }
 
-@keyframes fade {
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: #fff;
+  border-left: 1px solid #000;
+  animation: escribir 5s steps(30) infinite alternate; }
+
+@keyframes escribir {
   from {
-    opacity: 0; }
+    width: 100%; }
   to {
-    opacity: 1; } }
+    width: 0; } }
