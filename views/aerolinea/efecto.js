@@ -21,6 +21,6 @@ var writing = str => {
             document.body.style.color = "steelblue"
 
         }
-    }, 5); // 120 es el tiempo que yo le asigné, pueden cambiarlo para que sea más rápido o lento
+    }, 120); // 120 es el tiempo que yo le asigné, pueden cambiarlo para que sea más rápido o lento
 };
 writing('Bienvenido, soy una máquina de escribir en JS');

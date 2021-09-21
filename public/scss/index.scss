@@ -443,3 +443,34 @@ height: 500px;
     display: block;
     margin: 0.5rem 1rem;
 }
+ 
+
+///Animacion
+        h2 {
+			width: 800px;
+			line-height: 40px;
+			border-bottom: 1px solid;
+			margin: 200px auto;
+			font-size: 24px;
+		}
+		
+		.animate {
+			display: inline-block;
+			padding: 0 5px;
+			vertical-align: 3px;
+			font-size: 20px;
+			font-weight: normal;
+		}
+		
+		.animate.on {
+			animation: fade 1.5s infinite forwards;
+		}
+		
+		@keyframes fade {
+			from {
+				opacity: 0;
+			}
+			to {
+				opacity: 1;
+			}
+		}
