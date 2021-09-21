@@ -449,9 +449,11 @@ height: 500px;
  
  
 body { 
-	font-family: monospace; 
-	background:url("../images/d1.jpg");
+	font-family:  inherit; 
+	background:transparent;
 }
+
+
 .contenedor {
 	margin: auto;
 	display: table;
@@ -460,19 +462,35 @@ body {
 h1 { 
 	position: relative; 
 	float: left;
-	background:url("../images/d1.jpg");
-	color: #fff;
-	font-size: 2.5em;
+	background:transparent;
+	color: rgb(74, 9, 195);
+  font-size: 2.5em;
+  padding-top: 50px;
 }
 
 h1 span {
-    position:absolute;
-    right:0;
-    width:0;
-    background: #fff;
+    position: absolute;
+    right: 0;
+    width: 0;
+    background: url("../images/d1.jpg") no-repeat center ;
+        background-color: rgba(0, 0, 0, 0);
+        background-position-x:10px;
+        background-position-y: center;
+        background-repeat: no-repeat;
+        background-attachment:;
+        background-image: url("../images/d1.jpg");
+        background-size: auto;
+        background-origin: padding-box;
+        background-clip: border-box;
     border-left: 1px solid #000;
-    animation: escribir 5s steps(30) infinite alternate;
-}
+    animation: escribir 5s steps(30) ;
+
+      position: absolute;
+    right: 0;
+    width: 0;
+    background: url("../images/d1.jpg") no-repeat center;
+    border-left: 1px solid #000;
+    animation: escribir 5s steps(30) infinite alternate; 
 
 @keyframes escribir {
     from { width: 100% }

@@ -7470,8 +7470,8 @@ h1.welcome {
   margin: 0.5rem 1rem; }
 
 body {
-  font-family: monospace;
-  background: url("../images/d1.jpg"); }
+  font-family: inherit;
+  background: transparent; }
 
 .contenedor {
   margin: auto;
@@ -7480,15 +7480,16 @@ body {
 h1 {
   position: relative;
   float: left;
-  background: url("../images/d1.jpg");
-  color: #fff;
-  font-size: 2.5em; }
+  background: transparent;
+  color: #4a09c3;
+  font-size: 2.5em;
+  padding-top: 50px; }
 
 h1 span {
   position: absolute;
   right: 0;
   width: 0;
-  background: #fff;
+  background: url("../images/d1.jpg") no-repeat center;
   border-left: 1px solid #000;
   animation: escribir 5s steps(30) infinite alternate; }
 
