@@ -394,6 +394,7 @@ transition: all 0.5s ease;
 	color:rgb(6, 9, 175);
   background-size: cover;
   
+
  }
 h1.welcome {
     padding-top:150px;
@@ -407,14 +408,14 @@ color: rgb(14, 13, 13);
 padding-top: 0px;
 }
 
-.avion {
-    min-height: auto;
-    min-width: 200px;
-    height: 100%;
-    width: auto;
-    max-height: 100%;
-    max-width: 100%;
-    display: flex;
+.avion{
+  min-height:200px;
+  min-width:200px;
+  height:100%;
+  width:auto;
+  max-height:100%;
+  max-width:100%;
+  display: flex;
 }
 
 .novedades{
@@ -438,12 +439,45 @@ height: 500px;
   display:inline-block;
 
 }
-
-<<<<<<< HEAD
 .nav-link {
     display: block;
-    margin: 0.5rem .5rem;
+    margin: 0.5rem 1rem;
 }
-=======
-//Agregando typewriter
->>>>>>> daicelys_ajustes
+
+
+//Animacion
+@import url('pubilic/animacion.txt');
+
+body .letrero{
+  padding: 40px;
+  background-color:("../images/d1.jpg") no-repeat center top;  
+}
+
+p .letrero{
+  border-right: solid 3px rgba(51, 6, 133, 0.75);
+  white-space: nowrap;
+  overflow: hidden;    
+  font-family: 'Source Code Pro', monospace;  
+  font-size: 28px;
+  color: rgba(255,255,255,.70);
+}
+
+/* Animation */
+p .letrero{
+  animation: animated-text 4s steps(29,end) 1s 1 normal both,
+             animated-cursor 600ms steps(29,end) infinite;
+}
+
+/* text animation */
+
+.letrero animated-text {
+  from{width: 0;}
+  to{width: 472px;}
+}
+
+/* cursor animations */
+
+.letrero @keyframes animated-cursor{
+  from{border-right-color: rgba(0,255,0,.75);}
+  to{border-right-color: transparent;}
+}
