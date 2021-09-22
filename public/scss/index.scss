@@ -379,3 +379,74 @@ transition: all 0.5s ease;
 .tooltip.bs-tooltip-top .arrow.red:before{
   border-top-color:  rgb(179, 5, 5);
 }
+
+
+
+
+///======================================Estilos DAICELYS=====================
+.logo{
+  width: 50px;
+  
+}
+
+.encabezado{
+	background: url("../images/d1.jpg") no-repeat center top; 
+	color:rgb(6, 9, 175);
+  background-size: cover;
+  
+
+ }
+h1.welcome {
+    padding-top:150px;
+    
+}
+
+
+.agencia{
+background: #c5c5c8;
+color: rgb(14, 13, 13);
+padding-top: 0px;
+}
+
+.avion{
+  min-height:200px;
+  min-width:200px;
+  height:100%;
+  width:auto;
+  height: 22vw;
+  width: 44vw;
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .avion{
+    height: 45vw;
+    width: 90vw;
+  }
+}
+.novedades{
+  background:rgb(182, 214, 186) ;
+  padding-top:20px;
+}
+
+.novedades .carousel img{
+height: 500px;
+}
+
+.parrafo{
+  font-size: 20px;
+}
+
+.letrero{
+  margin-top: auto;
+}
+
+.navbar-logo{
+  display:inline-block;
+
+}
+.nav-link {
+    display: block;
+    margin-left: .5rem;
+}
+ 

@@ -7423,3 +7423,53 @@ body {
 
 .tooltip.bs-tooltip-top .arrow.red:before, .tooltip.bs-tooltip-auto[x-placement^="top"] .arrow.red:before {
   border-top-color: #b30505; }
+
+.logo {
+  width: 50px; }
+
+.encabezado {
+  background: url("../images/d1.jpg") no-repeat center top;
+  color: #0609af;
+  background-size: cover; }
+
+h1.welcome {
+  padding-top: 150px; }
+
+.agencia {
+  background: #c5c5c8;
+  color: #0e0d0d;
+  padding-top: 0px; }
+
+.avion {
+  min-height: 200px;
+  min-width: 200px;
+  height: 100%;
+  width: auto;
+  height: 22vw;
+  width: 44vw;
+  display: flex; }
+
+@media (max-width: 991px) {
+  .avion {
+    height: 45vw;
+    width: 90vw; } }
+
+.novedades {
+  background: #b6d6ba;
+  padding-top: 20px; }
+
+.novedades .carousel img {
+  height: 500px; }
+
+.parrafo {
+  font-size: 20px; }
+
+.letrero {
+  margin-top: auto; }
+
+.navbar-logo {
+  display: inline-block; }
+
+.nav-link {
+  display: block;
+  margin-left: .5rem; }
