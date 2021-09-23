@@ -7462,7 +7462,9 @@ h1.welcome {
 
 .carousel img {
   width: 220px;
-  height: 450px; }
+  height: 450px;
+  display: flex;
+  justify-content: center; }
 
 .parrafo {
   font-size: 20px; }
@@ -7471,7 +7473,7 @@ h1.welcome {
   margin-top: auto; }
 
 .navbar-logo {
-  display: inline-block; }
+  display: flex; }
 
 .nav-link {
   display: block;

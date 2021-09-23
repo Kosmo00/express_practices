@@ -434,6 +434,8 @@ padding-top: 0px;
 .carousel img {
     width: 220px;
     height: 450px;
+    display: flex;
+    justify-content: center;
   }
 
 .parrafo{
@@ -445,7 +447,7 @@ padding-top: 0px;
 }
 
 .navbar-logo{
-  display:inline-block;
+  display:flex;
 
 }
 .nav-link {
