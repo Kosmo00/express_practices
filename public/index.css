@@ -7430,7 +7430,8 @@ body {
 .encabezado {
   background: url("../images/d1.jpg") no-repeat center top;
   color: #0609af;
-  background-size: cover; }
+  background-size: cover;
+  justify-content: center; }
 
 h1.welcome {
   padding-top: 150px; }

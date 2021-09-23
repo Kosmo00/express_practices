@@ -393,7 +393,7 @@ transition: all 0.5s ease;
 	background: url("../images/d1.jpg") no-repeat center top; 
 	color:rgb(6, 9, 175);
   background-size: cover;
-  
+  justify-content: center;
 
  }
 h1.welcome {
@@ -436,7 +436,10 @@ padding-top: 0px;
     height: 450px;
     display: flex;
     justify-content: center;
+  
   }
+
+
 
 .parrafo{
   font-size: 20px;
