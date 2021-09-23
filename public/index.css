@@ -7456,10 +7456,14 @@ h1.welcome {
 
 .novedades {
   background: #b6d6ba;
-  padding-top: 20px; }
+  padding-top: 20px;
+  justify-content: center;
+  display: flex; }
 
-.novedades .carousel img {
-  height: 500px; }
+@media (min-width: 300px) and (max-width: 920px) {
+  .carousel {
+    min-width: 280px;
+    max-width: 900px; } }
 
 .parrafo {
   font-size: 20px; }
