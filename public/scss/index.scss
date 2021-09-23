@@ -431,13 +431,10 @@ padding-top: 0px;
   display: flex; 
 }
 
-.carousel{
- @media (min-width: 300px) and (max-width: 920px) { 
-min-width: 280px;
-max-width: 900px;
+.carousel img {
+    width: 220px;
+    height: 450px;
   }
-
-}
 
 .parrafo{
   font-size: 20px;

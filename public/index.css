@@ -7460,10 +7460,9 @@ h1.welcome {
   justify-content: center;
   display: flex; }
 
-@media (min-width: 300px) and (max-width: 920px) {
-  .carousel {
-    min-width: 280px;
-    max-width: 900px; } }
+.carousel img {
+  width: 220px;
+  height: 450px; }
 
 .parrafo {
   font-size: 20px; }
