@@ -438,17 +438,14 @@ padding-top: 0px;
     justify-content: center;
 }
 //Media query
-@media (min-width:300px) {
+@media (min-width:270px) {
  .novedades .carousel img {
     height: 80vh;
     width:20vw;
-    justify-content: center;
+    justify-content:center;
+    display: flex;
   }
 }
-
-
-
-
 
 .parrafo{
   font-size: 20px;
