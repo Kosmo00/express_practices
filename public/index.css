@@ -7474,6 +7474,13 @@ h1.welcome {
     justify-content: center;
     display: flex; } }
 
+@media (max-width: 327px) {
+  .novedades .carousel img {
+    height: 100vh;
+    width: 40vw;
+    justify-content: center;
+    display: flex; } }
+
 .parrafo {
   font-size: 20px; }
 
