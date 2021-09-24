@@ -7467,7 +7467,7 @@ h1.welcome {
   display: flex;
   justify-content: center; }
 
-@media (min-width: 270px) {
+@media (min-width: 300px) {
   .novedades .carousel img {
     height: 80vh;
     width: 20vw;
