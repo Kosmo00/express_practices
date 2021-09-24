@@ -431,19 +431,23 @@ padding-top: 0px;
   display: flex; 
 }
 
-.carousel img {
-    width: 200px;
+.novedades .carousel {
+    width: 300px;
     height:500px;
     display: flex ;
-justify-content: center;
- 
+    justify-content: center;
 }
 
-@media (max-width: 300px) {
-  .carousel img{
-    height: 70vh;
-    width:45vh;
+@media (min-width:300px) {
+ .novedades .carousel img {
+    height: 80vh;
+    width:20vw;
+    justify-content: center;
   }
+}
+
+
+
 
 .parrafo{
   font-size: 20px;
