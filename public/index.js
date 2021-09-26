@@ -151,6 +151,11 @@
             setTooltip($star_list, "Please, Rate Us", 'no', 'no')
         }
     }
+
+
+    $(document).ready(function () {
+        alert('Estoy listo');
+    });
     //================================FUNCIONES PARA VALIDAR EL FORMULARIO==================
     function BeforeSubmit() { //==========Antes de enviar
 
