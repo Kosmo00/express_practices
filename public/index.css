@@ -10464,3 +10464,7 @@ button {
     border-bottom-left-radius: 6px;
 }
 
+ #navb.scrolled {
+  background-color:black !important;
+  transition: background-color 200ms linear;
+}
