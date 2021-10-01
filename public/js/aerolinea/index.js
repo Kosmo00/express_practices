@@ -7,3 +7,12 @@ const typed = new Typed('.text-slider', {
     backDelay: 1100,
     backSpeed: 30
 })
+
+$(window).scroll(function () {
+
+    if ($(this).scrollTop() > 100) {
+        $('.navbar').addClass("dark")
+    } else {
+        $(".navbar").removeClass("dark")
+    }
+})

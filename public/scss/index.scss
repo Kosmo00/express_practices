@@ -450,3 +450,25 @@ height: 500px;
     margin-left: .5rem;
 }
  
+@media (max-width: 991px) {
+  .novedades .carousel{
+    width: 70vh; 
+  }
+}
+
+//Estilos para navbar
+.navscroll {
+    background-color:transparent;
+    color:white;
+    transition:background-color 200ms, color 200ms;
+}
+
+.navscroll.dark {
+    background-color:black;
+    color:white;
+}
+
+.dark {
+  background:black;
+  color: white;
+}

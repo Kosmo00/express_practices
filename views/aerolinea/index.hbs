@@ -1,8 +1,7 @@
-
 <!--menu de navegacio-->
 
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="navbar-logo">
     <a class="navbar-brand" href="index.hbs">
       <img class="logo" src="images/planet.png" alt="logo de la aerolinea">
@@ -94,47 +93,16 @@
 <!--Fin Agencia --->
 
 
-<section class="novedades text-center">
+<section class="novedades mx-auto">
   <div class="container">
-    <h2 class="display-5 ">Vuelos a ciudades</h2>
+    <h2 class="display-5 text-center ">Vuelos a ciudades</h2>
 
     <div class="row py-4">
-      <div class="col-sm-12 col-md-5">
+      <div class="col-sm-12 col-lg-5 mx-auto">
+
         <!--CARRUSEL-->
-        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+        {{>carousel}}
 
-          </ol>
-          <div class="carousel-inner">
-            <div class="carousel-item active" style="height:auto">
-              <img src="images/fondo1.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" style="height: auto">
-              <img src="images/fondo2.jpg" class="d-block w-100" alt="...">
-            </div>
-            <div class="carousel-item" style="height: auto">
-              <img src="images/fondo3.jpg" class="d-block w-100" alt="...">
-            </div>
-
-            <div class="carousel-item" style="height: auto">
-              <img src="images/fondo4.jpg" class="d-block w-100" alt="...">
-            </div>
-
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-        </div>
         <!--fIN Carousel-->
 
       </div>
@@ -161,6 +129,52 @@
     </div>
   </div>
 </section>
+
+<section class="formulario">
+  <div class="container-fluid p-4 ">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card my-3">
+          <div class="card-body">
+
+            <div class="card-header text-center">
+              <h3>Introduzca sus datos</h3>
+            </div>
+
+            <form class="formulario my-3">
+
+              <div class="from-group my-3">
+                <input type="text" class="form-control" name="name" placeholder="Escriba nombre">
+              </div>
+
+              <div class="from-group my-3">
+                <input type="email" class="form-control" name="correo" placeholder="Escriba gmail">
+              </div>
+
+              <div class="from-group my-3">
+                <input type="text" class="form-control" name="text" placeholder="Escriba celular">
+
+
+              </div>
+
+              <div class="from-group my-3 text-center ">
+                <textarea class="form-control" name="textarea" id="" rows="3"></textarea>
+              </div>
+
+              <div class="from-group my-3 text-center">
+                <button type="submit" class="btn-success px-2">Enviar</button>
+                <button type="reset" class="btn-success px-2">Borrar</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</section>
+
+
 
 <script src="/js/typed.min.js"></script>
 <script src="/js/aerolinea/index.js"></script>
