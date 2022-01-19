@@ -1,0 +1,75 @@
+.welcome {
+  background: url(../../images/biblioteca.jpg) no-repeat fixed center top;
+  background-size: cover;
+  height: 100vh; }
+
+.logo {
+  width: 150px; }
+
+.navbar {
+  animation: all 1s ease; }
+
+.small {
+  height: 10vh; }
+
+.navbar-toggler:focus {
+  outline: 0; }
+
+.welcome ul {
+  text-align: end; }
+
+.welcome-text h1 {
+  color: white;
+  padding-top: 15rem; }
+
+.welcome-text h3 {
+  color: white; }
+
+.biblioteca {
+  margin-top: 5rem; }
+
+#rate-us {
+  padding: 0; }
+
+#rate-us li {
+  list-style: none;
+  margin-right: .5rem; }
+
+#rate-us li button {
+  border: 0;
+  background-color: transparent;
+  color: #4e524e;
+  padding: 0;
+  font-size: 25px; }
+
+#rate-us li button:focus {
+  outline: 0; }
+
+.blue-star {
+  color: #12AFAF !important; }
+
+.carousel-container {
+  padding-top: 1.55vh;
+  background-color: grey;
+  height: 73.1vh; }
+
+.carousel-container img {
+  height: 70vh; }
+
+footer {
+  height: 17vh;
+  width: 100wh;
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 1rem; }
+
+footer ul {
+  list-style: none; }
+
+footer ul li {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-size: 1.5rem; }
